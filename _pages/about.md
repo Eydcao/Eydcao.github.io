@@ -7,11 +7,11 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I will be joining the Computer Science Department, UCLA, for a journey of PhD Program in CS under the supervision of Prof. [Chenfanfu Jiang](https://www.seas.upenn.edu/~cffjiang/) beginning September 2021. My primary research interest is computer graphics and physical simulation, especially fluid simulation deriving from my previous working experiences in CFD(computational fluid dynamics) and heat transfer. I am also expanding my interest in optimization and machine learning for its wide application of engineering controls.
+I will be joining the Computer Science Department, UCLA, for a journey of PhD Program in CS under the supervision of Prof. [Chenfanfu Jiang](https://www.seas.upenn.edu/~cffjiang/) beginning September 2021. My primary research interest is computer graphics, large-scale film effects, and physical simulation. I am also expanding my interest in optimization and machine learning for its wide application of engineering controls.
 
 I received my Bachelor's Degree (B.Eng.) in Thermal Science and Energy Engineering from the School of Engineering Science, University of Science and Technology of China (USTC) in July 2016. My thesis was upon the experimental and numerical study of the cooling efficiency of the turbine cascade in the airplane engine.
 
-I received my Master's Degree (MASc.) in Mechanical Engineering from the School of Engineering, the University of British Columbia in November 2018. My research thesis focused on [the analytical study and numerical simulation of fluid flow and heat transfer in microchannels](https://dx.doi.org/10.14288/1.0372129).
+I received my Master's Degree (MASc.) in Mechanical Engineering from the School of Engineering, the University of British Columbia in November 2018. My supervisor was Prof. [Sunny Li](https://engineering.ok.ubc.ca/about/contact/sunny-li/). My research thesis focused on [the analytical study and numerical simulation of fluid flow and heat transfer in microchannels](https://dx.doi.org/10.14288/1.0372129).
 
 Here is my [CV](https://eydcao.github.io/files/yadi_cv.pdf).
 
