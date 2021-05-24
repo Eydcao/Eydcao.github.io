@@ -7,7 +7,7 @@ redirect_from:
   - /about/
   - /about.html
 ---
-I will be joining the Computer Science Department, UCLA, for a journey of PhD Program in CS under the supervision of Prof. [Chenfanfu Jiang](https://www.seas.upenn.edu/~cffjiang/) beginning September 2021. My primary research interest is computer graphics, large-scale film effects, and physical simulation. I am also expanding my interest in optimization and machine learning for its wide application of engineering controls.
+I will be joining the Computer Science Department, UCLA, for a journey of PhD Program in CS under the supervision of Prof. [Demetri Terzopoulos](http://web.cs.ucla.edu/~dt/) beginning September 2021. My primary research interest is computer graphics, large-scale film effects, and physical simulation. I am also expanding my interest in optimization and machine learning for its wide application of engineering controls.
 
 I received my Bachelor's Degree (B.Eng.) in Thermal Science and Energy Engineering from the School of Engineering Science, University of Science and Technology of China (USTC) in July 2016. My thesis was upon the experimental and numerical study of the cooling efficiency of the turbine cascade in the airplane engine.
 
