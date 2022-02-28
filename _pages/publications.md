@@ -7,7 +7,7 @@ author_profile: true
 
 ### An Efficient B-Spline Lagrangian/Eulerian Method for Compressible Flow, Shock Waves, and Fracturing Solids
 
-Yadi Cao, Yunuo Chen, Minchen Li ,Yin Yang, Xinxin Zhang, Mridul Aanjaneya ,Chenfanfu Jiang (ACM Transactions on Graphics 2022)
+Yadi Cao, Yunuo Chen, Minchen Li ,Yin Yang, Xinxin Zhang, Mridul Aanjaneya, Chenfanfu Jiang (ACM Transactions on Graphics 2022)
 
 Links: [Paper](https://dl.acm.org/doi/10.1145/3519595)
 
