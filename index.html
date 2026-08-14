@@ -4,10 +4,22 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/assets/yadi.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yadi Cao — Assistant Professor, Computer Science, UCF</title>
+    <!-- The name alone, on the owner's call. An earlier pass appended the role and a
+         hiring signal to buy search visibility; it also made the browser tab a
+         sentence. The recruiting fact lives in the description below, which is what
+         search results and link previews actually render underneath the title. -->
+    <title>Yadi Cao</title>
+    <!-- NO DATED FACT GOES IN HERE. The terms, the start dates and the funding words
+         belong to the Openings table in scripts/05-joining.md, which the Joining
+         section and the hero banner both render, so those two never disagree. This
+         file is static, no pipeline touches it, and it cannot read that module — so a
+         year or a funding term copied here would be a fourth place to maintain and the
+         first one to go stale. The recruiting signal is worth carrying because search
+         results and link previews render this line; the specifics are not. Say that
+         recruiting is open and let the page say on what terms. -->
     <meta
       name="description"
-      content="Yadi Cao is an Assistant Professor of Computer Science at the University of Central Florida, affiliated with the UCF Institute of Artificial Intelligence. Machine learning that survives deployment in science and engineering: surrogate models, cost-aware scientific agents, and the numerical methods underneath."
+      content="Yadi Cao, Assistant Professor of Computer Science at UCF. Surrogate models for costly simulation, and scientific agents. Recruiting PhD students and postdocs."
     />
     <!--
       The spa-github-pages redirect script that used to live here was removed
@@ -15,10 +27,107 @@
       there are no client-side routes for GitHub Pages to fail to serve.
       public/404.html was deleted for the same reason.
     -->
-    <script type="module" crossorigin src="/assets/index-B7_pPH9Q.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Be-mzoHR.css">
+
+    <!--
+      THE REVEAL TIMER FOR THE FALLBACK IN #root, AND NOTHING ELSE. The fallback's own
+      appearance is set with inline `style` attributes on its markup, because it has to
+      render when the missing stylesheet is the thing that broke. This rule only decides
+      WHEN it becomes visible, and it lives here rather than in a `style` attribute
+      because a delay needs a keyframe.
+
+      The fallback starts transparent and fades in after 1.2s. React clears #root the
+      moment it mounts, which on any normal load happens in a fraction of that, so the
+      reader never sees it — that is the requirement it exists under: a message that
+      flashes on every healthy load is worse than no message. Past 1.2s the script has
+      either failed to load or failed to run, and the message is the whole page.
+
+      This is a `<style>` element in the document, not a stylesheet request, so it is
+      immune to the network failure it is compensating for.
+    -->
+    <style>
+      #root-fallback {
+        opacity: 0;
+        animation: root-fallback-in 0.2s linear 1.2s forwards;
+      }
+      @keyframes root-fallback-in {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <!--
+      WITH SCRIPTING OFF THERE IS NOTHING TO WAIT FOR, so drop the delay and show the
+      fallback immediately. This is why there is no second copy of the message inside a
+      `<noscript>` in the body: one piece of markup serves both the no-JavaScript reader
+      and the reader whose JavaScript failed, and only its timing differs.
+
+      A `<style>` inside `<noscript>` is valid precisely here, in `<head>`.
+    -->
+    <noscript>
+      <style>
+        #root-fallback {
+          opacity: 1 !important;
+          animation: none !important;
+        }
+      </style>
+    </noscript>
+    <script type="module" crossorigin src="/assets/index-DlXT5neC.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B1A9iZe-.css">
   </head>
   <body>
-    <div id="root"></div>
+    <!--
+      #root IS NOT EMPTY ANY MORE, AND THAT IS THE POINT. Everything this page says is
+      rendered by React into this div, so until the script runs the document has no text
+      in it at all. Three separate failures land on that same blank white page and none
+      of them says a word to the reader:
+
+        * opening `dist/index.html` from the filesystem, where `base: '/'` sends every
+          asset path to the filesystem root and all of them 404 (see ./CLAUDE.md — this
+          is permanent, `npm run preview` is how you look at a build);
+        * JavaScript turned off, or the one script failing to load;
+        * an uncaught error in the first render, which `ErrorBoundary` catches when
+          React is running at all and cannot when it is not.
+
+      Vite leaves this div's contents alone through the build, and React removes them
+      when it mounts, so on a working load this costs one paragraph of HTML and nothing
+      else. It is also what a non-JavaScript crawler or a text browser gets instead of
+      an empty document, which is why it names the person and links somewhere real
+      rather than saying "enable JavaScript".
+
+      IT MUST NOT READ AS AN ERROR DIALOG. No red, no warning icon, no apology in the
+      first line: on the crawler path nothing is wrong at all. The name and the
+      affiliation come first and the explanation follows them.
+
+      The facts here are duplicated from scripts/01-home.md and cannot be otherwise — this
+      file is static, no pipeline touches it, and it cannot import a module. Keep the
+      set as small as it is: a name, a role, one link, one address. NO DATED FACT, for
+      the same reason as the description above.
+    -->
+    <div id="root">
+      <div
+        id="root-fallback"
+        style="
+          font-family: system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+          color: #1f2937;
+          line-height: 1.6;
+          margin: 4rem auto;
+          max-width: 34rem;
+          padding: 0 1.5rem;
+        "
+      >
+        <h1 style="font-size: 1.5rem; font-weight: 700; margin: 0 0 0.5rem">Yadi Cao</h1>
+        <p style="margin: 0 0 1rem">
+          Assistant Professor of Computer Science, University of Central Florida. Surrogate
+          models for costly simulation, and scientific agents.
+        </p>
+        <p style="margin: 0 0 1rem">
+          This site needs JavaScript to show the full page, and it has not run here. The
+          publication list is on
+          <a style="color: #1d4ed8" href="https://scholar.google.com/citations?user=hkVMfjcAAAAJ&amp;hl=en">Google Scholar</a>,
+          and mail reaches me at yadi.cao [at] ucf [dot] edu.
+        </p>
+      </div>
+    </div>
   </body>
 </html>
